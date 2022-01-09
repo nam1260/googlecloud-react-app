@@ -16,7 +16,6 @@ const SubTitle = ({currentSubMenu})=>{
     console.log(currentSubMenu)
     return (
         <StyledSubTitle>
-            <img/>
             <span>{currentSubMenu.menuName}</span>
         </StyledSubTitle>
     )

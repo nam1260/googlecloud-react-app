@@ -27,7 +27,7 @@ const StyledMenuList = Styled.ul`
 `
 
 const Menu = ({menu,key,setOpenSideMenu,setCurrentMenu}) => {
-
+    console.log(menu.imgUrl);
     const onClickMenu = useCallback(()=>{
         console.log("onClickMenu");
         console.log(menu);
@@ -37,6 +37,7 @@ const Menu = ({menu,key,setOpenSideMenu,setCurrentMenu}) => {
 
     return (
         <StyledMenu key={key} onClick={onClickMenu}>
+            <img src={menu.imgUrl}/>
             <span>{menu.menuName}</span>
         </StyledMenu>
     )

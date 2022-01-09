@@ -43,6 +43,7 @@ const SubMenu = ({menu,key, setCurrentSubMenu}) => {
     return (
         <StyledSubMenu
             key={key} onClick={onClickMenu}>
+            <img src={menu.imgUrl}/>
             <span>{menu.menuName}</span>
         </StyledSubMenu>
     )
