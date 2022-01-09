@@ -9,6 +9,9 @@ const StyledSubMenuList = Styled.ul`
     margin: 20px 0 0 0;
     width: 200px;
     
+    @media (max-width: 768px) {
+        display: none;  
+    }
   
 `
 
