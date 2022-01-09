@@ -1,8 +1,8 @@
 import Styled from "styled-components"
 import {useCallback, useState, useEffect, useMemo, useRef} from "react"
 
-
-const MENU_ICON_PATH = "/assets/images/list.png";
+import Menu from "./component/Menu.component"
+import MainTitle from "./component/MainTitle.component"
 
 const TEXT_MAIN_TITLE = "Google Cloud Platform";
 
@@ -12,7 +12,6 @@ const StyledHeader = Styled.div`
     height: 50px;
     display: flex;
     z-index: 2;
-    top: 0;
     background-color: #0096ff;
     flex-direction: row;
     justify-content: left;
@@ -39,35 +38,16 @@ const StyledHeader = Styled.div`
 
 `
 
-
-const Menu = ({onClickHandler}) => {
-
-    return (
-        <div onClick={() => onClickHandler(true)}>
-            <img alt="none" className={"top-icon"} src={MENU_ICON_PATH}/>
-        </div>
-    )
-
-}
-
-const MainTitle = ({title}) => {
-    return (
-        <div>
-            <span>{title}</span>
-        </div>
-    )
-}
-
 /**
  * 앱 상단 헤더 표시
  * @returns {*}
  * @constructor
  */
-const Header = ({onClickHandler})=> {
+const Header = ({isOpenSideMenu, setOpenSideMenu})=> {
 
   return (
       <StyledHeader>
-          <Menu/>
+          <Menu isOpenSideMenu = {isOpenSideMenu} setOpenSideMenu = {setOpenSideMenu}/>
           <MainTitle title={TEXT_MAIN_TITLE}/>
       </StyledHeader>
 
