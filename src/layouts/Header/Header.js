@@ -1,7 +1,6 @@
 import Styled from "styled-components"
-import {useCallback, useState, useEffect, useMemo, useRef} from "react"
 
-import Menu from "./component/Menu.component"
+import MenuBtn from "./component/MenuBtn.component"
 import MainTitle from "./component/MainTitle.component"
 
 const TEXT_MAIN_TITLE = "Google Cloud Platform";
@@ -47,7 +46,7 @@ const Header = ({isOpenSideMenu, setOpenSideMenu})=> {
 
   return (
       <StyledHeader>
-          <Menu isOpenSideMenu = {isOpenSideMenu} setOpenSideMenu = {setOpenSideMenu}/>
+          <MenuBtn isOpenSideMenu = {isOpenSideMenu} setOpenSideMenu = {setOpenSideMenu}/>
           <MainTitle title={TEXT_MAIN_TITLE}/>
       </StyledHeader>
 

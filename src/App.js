@@ -1,7 +1,7 @@
 import './App.css';
 import {useState} from "react";
 import Header from "./layouts/Header/Header";
-import SideMenu from "./components/SideMenu"
+import SideMenu from "./layouts/SideMenu/SideMenu"
 import MenuData from "./resources/Menu"
 
 function App() {

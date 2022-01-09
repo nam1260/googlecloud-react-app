@@ -1,7 +1,7 @@
 import { useCallback } from 'react';
 
 const MENU_ICON_PATH = "/assets/images/list.png";
-const Menu = ({isOpenSideMenu, setOpenSideMenu}) => {
+const MenuBtn = ({isOpenSideMenu, setOpenSideMenu}) => {
 
     const onClickMenuBtn = useCallback(()=>{
         setOpenSideMenu(!isOpenSideMenu);
@@ -13,4 +13,4 @@ const Menu = ({isOpenSideMenu, setOpenSideMenu}) => {
         </div>
     )
 }
-export default Menu;
+export default MenuBtn;
