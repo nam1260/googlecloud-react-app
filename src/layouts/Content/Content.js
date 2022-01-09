@@ -1,25 +1,28 @@
 import {useState,useEffect,useCallback,useMemo} from "react"
 import Styled from "styled-components";
 
+import Title from "./component/Title.component";
+import SubTitle from "./component/SubTitle.component";
+import SubMenu from "./component/SubMenu.component";
+import CurrentView from "./component/CurrentView.component";
 
 
 
-const StyledTopContent = styled.section`
+const StyledTopContent = Styled.section`
 
 `
-const StyledBottomContent = styled.section`
+const StyledBottomContent = Styled.section`
 
 `
 
 
-
-const StyledContent = styled.div`
+const StyledContent = Styled.div`
     
     display: flex;
     flex-direction: column;
 `
 
-const TopContent = () => {
+const TopContent = ({currentMenu}) => {
     return (
         <StyledTopContent>
 
@@ -27,7 +30,7 @@ const TopContent = () => {
     )
 };
 
-const BottomContent = () => {
+const BottomContent = ({currentMenu}) => {
     return (
         <StyledBottomContent>
 
@@ -44,12 +47,12 @@ const BottomContent = () => {
  * @returns {*}
  * @constructor
  */
-const Content = () => {
+const Content = ({currentMenu}) => {
 
     return (
         <StyledContent>
-            <TopContent></TopContent>
-            <BottomContent></BottomContent>
+            <TopContent currentMenu={currentMenu}></TopContent>
+            <BottomContent currentMenu={currentMenu}></BottomContent>
         </StyledContent>
     )
 
