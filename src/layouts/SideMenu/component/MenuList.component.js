@@ -26,10 +26,13 @@ const StyledMenuList = Styled.ul`
     margin: 20px 0 0 0;
 `
 
-const Menu = ({menu,key,setOpenSideMenu}) => {
+const Menu = ({menu,key,setOpenSideMenu,setCurrentMenu}) => {
 
     const onClickMenu = useCallback(()=>{
+        console.log("onClickMenu");
+        console.log(menu);
         setOpenSideMenu(false);
+        setCurrentMenu(menu);
     },[]);
 
     return (
@@ -40,13 +43,18 @@ const Menu = ({menu,key,setOpenSideMenu}) => {
 }
 
 
-const MenuList = ({setOpenSideMenu}) => {
+const MenuList = ({setOpenSideMenu,setCurrentMenu}) => {
 
     return (
         MenuData.length > 0 ?
             <StyledMenuList>
                 {MenuData.map((item,idx)=>{
-                    return <Menu key={idx} menu={item} setOpenSideMenu={setOpenSideMenu}/>
+                    return <Menu
+                        key={idx}
+                        menu={item}
+                        setOpenSideMenu={setOpenSideMenu}
+                        setCurrentMenu={setCurrentMenu}
+                    />
                 })}
             </StyledMenuList> : ""
     )

@@ -11,9 +11,19 @@ function App() {
 
     return (
         <div className="App">
-            <Header isOpenSideMenu={isOpenSideMenu} setOpenSideMenu={setOpenSideMenu}/>
-            <Content currentMenu={currentMenu}/>
-            <SideMenu isOpenSideMenu={isOpenSideMenu} setOpenSideMenu={setOpenSideMenu}/>
+            <Header
+                isOpenSideMenu={isOpenSideMenu}
+                setOpenSideMenu={setOpenSideMenu}
+            />
+            <Content
+                currentMenu={currentMenu}
+                setCurrentMenu={setCurrentMenu}
+            />
+            <SideMenu
+                isOpenSideMenu={isOpenSideMenu}
+                setOpenSideMenu={setOpenSideMenu}
+                setCurrentMenu={setCurrentMenu}
+            />
             {isOpenSideMenu && <div className="wrapper" onClick={() => {setOpenSideMenu(false)}} />}
         </div>
     );

@@ -16,10 +16,13 @@ const StyledSideMenu = Styled.div`
 `;
 
 
-const SideMenu = ({isOpenSideMenu, setOpenSideMenu}) => {
+const SideMenu = ({isOpenSideMenu, setOpenSideMenu, setCurrentMenu}) => {
     return (
         <StyledSideMenu isOpen={isOpenSideMenu}>
-            <MenuList setOpenSideMenu={setOpenSideMenu}></MenuList>
+            <MenuList
+                setOpenSideMenu={setOpenSideMenu}
+                setCurrentMenu={setCurrentMenu}
+            />
         </StyledSideMenu>
     )
 

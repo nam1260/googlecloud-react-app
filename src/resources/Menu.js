@@ -1,16 +1,16 @@
 const Menu = [
     {
-        menuName : "payment",
+        menuName : "COLOR",
         menuId: "1000",
         imgUrl: "",
         subMenu: [
             {
-                menuName: "결제 정보",
+                menuName: "RED",
                 menuId: "1001",
                 imgUrl: "",
             },
             {
-                menuName: "청구서",
+                menuName: "BLUE",
                 menuId: "1002",
                 imgUrl: "",
             }
@@ -18,17 +18,17 @@ const Menu = [
     },
 
     {
-        menuName : "고객지",
+        menuName : "FRUIT",
         menuId: "2000",
         imgUrl: "",
         subMenu: [
             {
-                menuName: "까치까치까치",
+                menuName: "APPLE",
                 menuId: "2001",
                 imgUrl: "",
             },
             {
-                menuName: "참새새나완전히 새됐어",
+                menuName: "ORANGE",
                 menuId: "2002",
                 imgUrl: "",
             }
@@ -36,17 +36,17 @@ const Menu = [
     },
 
     {
-        menuName : "성능리포",
+        menuName : "DRINK",
         menuId: "3000",
         imgUrl: "",
         subMenu: [
             {
-                menuName: "오렌지",
+                menuName: "COFFEE",
                 menuId: "3001",
                 imgUrl: "",
             },
             {
-                menuName: "포도",
+                menuName: "JUICE",
                 menuId: "3002",
                 imgUrl: "",
             }
