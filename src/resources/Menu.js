@@ -1,52 +1,74 @@
 const Menu = [
     {
-        menuName : "COLOR",
+        menuName : "결제",
         menuId: "1000",
         imgUrl: "",
         subMenu: [
             {
-                menuName: "RED",
+                menuName: "보고서",
                 menuId: "1001",
                 imgUrl: "",
+                actions:[
+
+                ]
             },
             {
-                menuName: "BLUE",
+                menuName: "결제수단",
                 menuId: "1002",
                 imgUrl: "",
+                actions:[
+
+                ]
+            },
+            {
+                menuName: "문서",
+                menuId: "1003",
+                imgUrl: "",
+                actions:[
+                    "인쇄",
+                    "새로고침",
+                    "전송"
+                ]
             }
         ]
     },
 
     {
-        menuName : "FRUIT",
+        menuName : "API 및 서비스",
         menuId: "2000",
         imgUrl: "",
         subMenu: [
             {
-                menuName: "APPLE",
+                menuName: "사용자 인증 정보",
                 menuId: "2001",
                 imgUrl: "",
+                actions:[
+
+                ]
             },
             {
-                menuName: "ORANGE",
+                menuName: "도메인 확인",
                 menuId: "2002",
                 imgUrl: "",
+                actions:[
+
+                ]
             }
         ]
     },
 
     {
-        menuName : "DRINK",
+        menuName : "지원",
         menuId: "3000",
         imgUrl: "",
         subMenu: [
             {
-                menuName: "COFFEE",
+                menuName: "개요",
                 menuId: "3001",
                 imgUrl: "",
             },
             {
-                menuName: "JUICE",
+                menuName: "케이스",
                 menuId: "3002",
                 imgUrl: "",
             }

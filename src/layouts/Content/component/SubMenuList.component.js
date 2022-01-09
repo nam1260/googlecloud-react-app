@@ -16,7 +16,7 @@ const StyledSubMenuList = Styled.ul`
 `
 
 const StyledSubMenu = Styled.li`
-    font-size: 25px;
+    font-size: 22px;
     line-height: 1.25;
     letter-spacing: -.8px;
     color: #101010;
