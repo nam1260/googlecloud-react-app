@@ -19,8 +19,6 @@ const StyledContent = styled.div`
     flex-direction: column;
 `
 
-
-
 const TopContent = () => {
     return (
         <StyledTopContent>
