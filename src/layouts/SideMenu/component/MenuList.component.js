@@ -6,16 +6,20 @@ import Styled from 'styled-components';
 const StyledMenu = Styled.li`
 
     font-size: 25px;
-    line-height: 1.25;
+    line-height: 52px;
     letter-spacing: -.8px;
     color: #101010;
     margin-bottom: 27px;
     cursor: pointer;
+    display: flex;
     
     &:hover {
         background-color: rgba(0,0,0,0.2);
     }
     
+    & > img {
+        max-height: 44px;
+    }
     & > span{
         margin-left: 20px;
     }

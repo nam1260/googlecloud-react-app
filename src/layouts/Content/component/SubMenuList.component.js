@@ -22,13 +22,18 @@ const StyledSubMenu = Styled.li`
     color: #101010;
     margin-bottom: 27px;
     cursor: pointer;
+    display: flex;
     
     &:hover {
         background-color: rgba(0,0,0,0.2);
     }
     
+    & > img {
+        max-height: 44px;
+    }
     & > span{
         margin-left: 20px;
+        line-height: 44px;
     }
 `
 

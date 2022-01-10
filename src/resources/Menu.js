@@ -37,12 +37,12 @@ const Menu = [
     },
 
     {
-        menuName : "API 및 서비스",
+        menuName : "API",
         menuId: "2000",
         imgUrl: "/assets/icons/icoHeart.png",
         subMenu: [
             {
-                menuName: "사용자 인증 정보",
+                menuName: "사용자 인증",
                 menuId: "2001",
                 imgUrl: "/assets/icons/icoStar1.png",
                 actions:[
