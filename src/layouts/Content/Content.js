@@ -3,7 +3,7 @@ import Styled from "styled-components";
 
  import Title from "./component/Title.component";
  import SubMenu from "./component/SubMenuList.component";
- import CurrentView from "./component/CurrentView.component";
+ import CurrentView from "./component/ContentDetail.component";
  import SubTitle from "./component/SubTitle.Component"
 
 

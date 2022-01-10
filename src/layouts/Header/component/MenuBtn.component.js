@@ -1,6 +1,6 @@
 import { useCallback } from 'react';
 
-const MENU_ICON_PATH = "/assets/images/list.png";
+const MENU_ICON_PATH = "/assets/icons/imgList.png";
 const MenuBtn = ({isOpenSideMenu, setOpenSideMenu}) => {
 
     const onClickMenuBtn = useCallback(()=>{
