@@ -64,8 +64,9 @@ const ContentDetailViewModel = (function () {
                 component = getImgComponentById(menuId);
                 break;
             case "2001":
+                break;
             case "2002":
-
+                component = ContentFactory.DomainComponent();
                 break;
             case "3001":
             case "3002":
