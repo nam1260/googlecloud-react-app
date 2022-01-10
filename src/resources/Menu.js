@@ -37,13 +37,13 @@ const Menu = [
                 menuName: "사용자 인증",
                 menuId: "2001",
                 imgUrl: "/assets/icons/icoStar1.png",
-                desc: "사용자 인증 api 를 호출합니다"
+                desc: "api 호출 테스트 화면입니다"
             },
             {
                 menuName: "도메인 확인",
                 menuId: "2002",
                 imgUrl: "/assets/icons/icoStar2.png",
-                actions: "설정 된 도메인의 유효성 여부를 체크합니다"
+                desc: "제 포트폴리오 및 개인 프로젝트 도메인 확인을 위한 화면입니다."
 
             }
         ]
@@ -58,13 +58,13 @@ const Menu = [
                 menuName: "고객지원",
                 menuId: "3001",
                 imgUrl: "/assets/icons/icoStar4.png",
-                desc: "고객 지원이 필요하신가요?"
+                desc: "뉴스 기사를 발췌했습니다 1"
             },
             {
                 menuName: "파트너문의",
                 menuId: "3002",
                 imgUrl: "/assets/icons/icoOpen.png",
-                desc: "파트너 문의 공간입니다"
+                desc: "뉴스 기사를 발췌했습니다 2"
             }
         ]
     }
