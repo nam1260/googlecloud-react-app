@@ -63,11 +63,17 @@ export const TextComponent = (text) => {
 
 
 
+const StyledImageComp = Styled.div`
+    & > img {
+        width: 100%;
+        height: auto;
+    }
+`
 export const ImageComponent = (url) => {
 
     return (
-        <div>
+        <StyledImageComp>
             <img src={url}/>
-        </div>
+        </StyledImageComp>
     )
 }
