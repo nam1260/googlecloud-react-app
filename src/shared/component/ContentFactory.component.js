@@ -1,9 +1,16 @@
 import {useCallback,useState,useEffect,useMemo} from "react";
 import Styled from "styled-components";
 
+import APIController from "../../controller/APIController"
 
 
 export const APITestComponent = () => {
+
+
+    console.log("APITestComponent");
+    //useEffect(()=>{
+        APIController.getStarList();
+    //},[]);
 
     return (
         <div></div>
