@@ -1,4 +1,8 @@
 import {useCallback,useState,useEffect,useMemo} from "react";
+import Styled from "styled-components";
+
+
+
 
 
 export const APITestComponent = () => {
@@ -10,25 +14,30 @@ export const APITestComponent = () => {
 };
 
 
-export const InputComponent = ({text}) => {
+const StyledTextComp = Styled.div`
+    position: absolute;
+    padding: 50px;
+
+`;
+export const TextComponent = (text) => {
+
+    const textContent = useMemo((()=>text),[text]);
+
     return (
-        <textarea type ="text"></textarea>
+        <StyledTextComp>
+            <span>{textContent}</span>
+        </StyledTextComp>
     )
-}
+};
 
-
-
-export const TextComponent = ({text}) => {
-    return (
-        <div></div>
-    )
-}
 
 
 export const ImageComponent = (url) => {
+
+    const selectedImgUrl = useMemo((()=>url),[url]);
     return (
         <div>
-            <img src={url}/>
+            <img src={selectedImgUrl}/>
         </div>
     )
 }

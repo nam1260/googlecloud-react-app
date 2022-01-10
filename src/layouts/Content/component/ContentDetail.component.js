@@ -16,8 +16,10 @@ const ContentDetail = ({currentSubMenu})=>{
 
 
     const curSubMenuDetail = useMemo(()=>{
+        const detail = ContentDetailViewModel.getDetailComponentById(currentSubMenu.menuId);
 
-        return ContentDetailViewModel.getDetailComponentById(currentSubMenu.menuId);
+        console.log(detail);
+        return detail;
 
     },[currentSubMenu.menuId]);
 
