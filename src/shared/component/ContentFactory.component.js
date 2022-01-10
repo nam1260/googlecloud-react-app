@@ -21,11 +21,10 @@ const StyledTextComp = Styled.div`
 `;
 export const TextComponent = (text) => {
 
-    const textContent = useMemo((()=>text),[text]);
 
     return (
         <StyledTextComp>
-            <span>{textContent}</span>
+            <span>{text}</span>
         </StyledTextComp>
     )
 };
@@ -34,10 +33,9 @@ export const TextComponent = (text) => {
 
 export const ImageComponent = (url) => {
 
-    const selectedImgUrl = useMemo((()=>url),[url]);
     return (
         <div>
-            <img src={selectedImgUrl}/>
+            <img src={url}/>
         </div>
     )
 }
