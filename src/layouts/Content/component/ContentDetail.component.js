@@ -11,8 +11,6 @@ const StyledContentView = Styled.div`
 `
 
 const ContentDetail = ({currentSubMenu})=>{
-    console.log("ContentDetail");
-    console.log(currentSubMenu.menuId);
 
     return (
         <StyledContentView>

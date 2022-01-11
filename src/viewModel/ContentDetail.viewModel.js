@@ -1,6 +1,48 @@
 import {useCallback,useState,useMemo,useEffect} from "react";
 import * as ContentFactory from "../shared/component/ContentFactory.component";
+import Content from '../layouts/Content/Content';
+import APIController from '../controller/APIController';
 
+const APITestComponent = () => {
+
+    const [response,setResponse] = useState(null);
+
+    const onClickBtn = (e) => {
+        APIController.getStarList().then(result => {
+            console.log(result);
+            if (result && result.status === 200) {
+                showResponseData(result.data.sort(()=>Math.random() - 0.5));
+            }
+        })
+    };
+
+    const showResponseData =useCallback((res)=> {
+        res = res.map((item)=>{
+            return (
+                <div>
+                    <br/>
+                    <div>분야: {item.catNm}</div>
+                    <div>등록일: {item.regDttm}</div>
+                    <div>이메일: {item.starId}</div>
+                    <div>이름: {item.starNm}</div>
+                    <br/>
+                </div>
+            )
+        });
+        setResponse(res);
+
+    },[]);
+
+    return (
+        <div>
+            <button onClick={onClickBtn}><p>API 호출</p></button>
+            {
+                response && response.length > 0 ? response:
+                    <div><p>"API 호출 버튼을 눌러주세요"</p></div>
+            }
+        </div>
+    )
+};
 
 const ContentDetailViewModel = ({currentMenuId})=> {
     console.log("ContentDetailViewModel  "+currentMenuId );
@@ -47,11 +89,6 @@ const ContentDetailViewModel = ({currentMenuId})=> {
 
     },[]);
 
-    const getAPIComponentById = useCallback(() => {
-
-        return ContentFactory.APITestComponent();
-    },[]);
-
 
     const getDetailComponentById = useCallback((menuId) => {
         let component;
@@ -60,9 +97,6 @@ const ContentDetailViewModel = ({currentMenuId})=> {
             case "1002":
             case "1003":
                 component = getImgComponentById(menuId);
-                break;
-            case "2001":
-                component = getAPIComponentById(menuId);
                 break;
             case "2002":
                 component = ContentFactory.DomainComponent();
@@ -82,11 +116,12 @@ const ContentDetailViewModel = ({currentMenuId})=> {
     const detailComponent  = useMemo(()=>{
 
         return getDetailComponentById(currentMenuId);
+
     },[currentMenuId]);
 
     return (
         <div>
-            {detailComponent}
+            {detailComponent ? detailComponent : <APITestComponent/>}
         </div>
     )
 

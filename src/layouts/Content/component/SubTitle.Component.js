@@ -21,7 +21,6 @@ const StyledSubTitle = Styled.div`
 
 
 const SubTitle = ({currentSubMenu})=>{
-    console.log(currentSubMenu)
 
     const onClickDesc = useCallback((e)=>{
         alert(e.target.innerText);

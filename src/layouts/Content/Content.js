@@ -58,8 +58,6 @@ const BottomContent = ({currentMenu,currentSubMenu,setCurrentSubMenu}) => {
  * @constructor
  */
 const Content = ({currentMenu}) => {
-    console.log(currentMenu);
-
     const [currentSubMenu, setCurrentSubMenu] = useState(currentMenu.subMenu[0]);
 
     useEffect(()=>{

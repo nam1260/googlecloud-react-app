@@ -1,32 +1,6 @@
 import {useCallback,useState,useEffect,useMemo} from "react";
 import Styled from "styled-components";
 
-import APIController from "../../controller/APIController"
-
-
-export const APITestComponent = () => {
-
-    //const [response,setResponse] = useState();
-
-    const onClickBtn = (e) => {
-        APIController.getStarList().then(result=>{
-            if(result && result.status === 200) {
-      //          setResponse(result.data);
-            }
-        })
-    }
-
-    return (
-        <div>
-            <button onClick={onClickBtn}>조회</button>
-
-            <div>{}</div>
-
-        </div>
-    )
-
-};
-
 
 const StyledDomainComponent = Styled.div`
      padding: 50px;
@@ -48,12 +22,10 @@ export const DomainComponent = () => {
 
     return (
         <StyledDomainComponent>
-            <a onClick={()=>{console.log("onclick"); window.open("https://github.com/nam1260/", '_blank')}}>gitHub 확인하기</a>
+            <a href="https://github.com/nam1260/" target='_blank'>gitHub 확인하기</a>
             <br/>
             <br/>
-
-            <a onClick={()=>{console.log("onclick"); window.open("https://www.youronlymoment.com/", '_blank')}}>개인 프로젝트 작업 중인 사이트 : 당신에게 선물 될 최고의 순간 ,Moment </a>
-
+            <a href="https://www.youronlymoment.com/" target='_blank'>개인 프로젝트 작업 중인 사이트 : 당신에게 선물 될 최고의 순간 ,Moment </a>
         </StyledDomainComponent>
 
 
@@ -72,7 +44,7 @@ export const TextComponent = (text) => {
 
     return (
         <StyledTextComp>
-            <span>{text}</span>
+            <p>{text}</p>
         </StyledTextComp>
     )
 };
