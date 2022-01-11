@@ -12,21 +12,13 @@ const StyledContentView = Styled.div`
 
 const ContentDetail = ({currentSubMenu})=>{
     console.log("ContentDetail");
-    console.log(currentSubMenu);
-
-
-    const curSubMenuDetail = useMemo(()=>{
-        const detail = ContentDetailViewModel.getDetailComponentById(currentSubMenu.menuId);
-
-        console.log(detail);
-        return detail;
-
-    },[currentSubMenu.menuId]);
-
+    console.log(currentSubMenu.menuId);
 
     return (
         <StyledContentView>
-            <div>{curSubMenuDetail}</div>
+            <ContentDetailViewModel
+                currentMenuId = {currentSubMenu.menuId}
+            />
         </StyledContentView>
     )
 };

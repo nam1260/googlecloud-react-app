@@ -1,10 +1,11 @@
-
+import {useCallback,useState,useMemo,useEffect} from "react";
 import * as ContentFactory from "../shared/component/ContentFactory.component";
 
 
-const ContentDetailViewModel = (function () {
+const ContentDetailViewModel = ({currentMenuId})=> {
+    console.log("ContentDetailViewModel  "+currentMenuId );
 
-    const getImgComponentById = (menuId) => {
+    const getImgComponentById = useCallback((menuId) => {
         let imgUrl;
 
         if(menuId === "1001") {
@@ -18,9 +19,9 @@ const ContentDetailViewModel = (function () {
         }
 
         return ContentFactory.ImageComponent(imgUrl);
-    };
+    },[]);
 
-    const getTextComponentById = (menuId) => {
+    const getTextComponentById = useCallback((menuId) => {
         let text = "";
         if(menuId === "3001") {
             text = "넷마블은 지난 7일 넷마블컴퍼니 정기 임원인사를 통해 이승원 각자 대표를 사장으로 승진 발령하고 글로벌 총괄로 신규 임명했다. 이 사장은 글로벌 총괄을 맡아 △카밤 △잼시티 △스핀엑스 등 해외 핵심 자회사 경영에 전진 배치해 글로벌 사업 추진력을 더한다는 계획이다. \n" +
@@ -42,20 +43,17 @@ const ContentDetailViewModel = (function () {
                 "넷마블 관계자는 “각 전문 분야를 책임지는 전략적 경영 체계를 통해 게임사업 경쟁력이 한층 강화될 것으로 기대한다”고 밝혔다.";
         }
 
-       // text="fasfasf";
         return ContentFactory.TextComponent(text);
 
-    };
+    },[]);
 
-    const getAPIComponentById = (menuId) => {
+    const getAPIComponentById = useCallback(() => {
 
-        let apiName;
+        return ContentFactory.APITestComponent();
+    },[]);
 
-        return ContentFactory.APITestComponent(apiName);
-    };
 
-    const getDetailComponentById = (menuId) => {
-        console.log(menuId);
+    const getDetailComponentById = useCallback((menuId) => {
         let component;
         switch (menuId) {
             case "1001":
@@ -77,13 +75,20 @@ const ContentDetailViewModel = (function () {
                 break;
         }
 
-        console.log(component);
         return component;
 
-    };
+    },[]);
 
-    return {
-        getDetailComponentById
-    }
-}());
+    const detailComponent  = useMemo(()=>{
+
+        return getDetailComponentById(currentMenuId);
+    },[currentMenuId]);
+
+    return (
+        <div>
+            {detailComponent}
+        </div>
+    )
+
+};
 export default ContentDetailViewModel;

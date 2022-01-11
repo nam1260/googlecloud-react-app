@@ -43,7 +43,7 @@ const Menu = [
                 menuName: "도메인 확인",
                 menuId: "2002",
                 imgUrl: "/assets/icons/icoStar2.png",
-                desc: "제 포트폴리오 및 개인 프로젝트 도메인 확인을 위한 화면입니다."
+                desc: "포트폴리오 및 개인 프로젝트 url 이 링크 된 화면입니다."
 
             }
         ]

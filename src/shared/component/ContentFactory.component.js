@@ -6,14 +6,23 @@ import APIController from "../../controller/APIController"
 
 export const APITestComponent = () => {
 
+    //const [response,setResponse] = useState();
 
-    console.log("APITestComponent");
-    //useEffect(()=>{
-        APIController.getStarList();
-    //},[]);
+    const onClickBtn = (e) => {
+        APIController.getStarList().then(result=>{
+            if(result && result.status === 200) {
+      //          setResponse(result.data);
+            }
+        })
+    }
 
     return (
-        <div></div>
+        <div>
+            <button onClick={onClickBtn}>조회</button>
+
+            <div>{}</div>
+
+        </div>
     )
 
 };
