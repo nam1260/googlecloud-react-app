@@ -1,4 +1,4 @@
-import {useCallback,useState,useEffect,useMemo} from "react";
+import React,{useCallback,useState,useEffect,useMemo} from "react";
 import Styled from "styled-components";
 
 
@@ -31,6 +31,7 @@ export const DomainComponent = () => {
 
     )
 };
+React.memo(DomainComponent);
 
 
 
@@ -48,6 +49,7 @@ export const TextComponent = (text) => {
         </StyledTextComp>
     )
 };
+React.memo(TextComponent);
 
 
 
@@ -65,3 +67,4 @@ export const ImageComponent = (url) => {
         </StyledImageComp>
     )
 }
+React.memo(ImageComponent);
